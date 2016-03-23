@@ -25,6 +25,15 @@ char* compact(char *string)
 {
     char* result = string;
 
+    size_t j = 0;
+    for (size_t i = 0; i < strlen(string); ++i) {
+        if (result[j] != string[i]) {
+            ++j;
+            result[j] = string[i];
+        }
+    }
+    result[++j] = '\0';
+
     return result;
 }
 

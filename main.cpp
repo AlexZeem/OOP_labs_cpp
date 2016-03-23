@@ -14,6 +14,14 @@ void stringtest()
     char string4[] = "ring";
     std::cout << "string1: "<< string1 << ";\tstring2: " << string4 << std::endl;
     std::cout << "result: " << substr(string1, string4) << std::endl;
+
+    std::cout << "2. char* compact(char *string)" << std::endl;
+    char string5[] = "string";
+    std::cout << "string: "<< string5 << std::endl;
+    std::cout << "result: " << compact(string5) << std::endl;
+    char string6[] = "stttriiinggg";
+    std::cout << "string: "<< string6 << std::endl;
+    std::cout << "result: " << compact(string6) << std::endl;
 }
 
 int main()
