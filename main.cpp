@@ -1,7 +1,12 @@
 #include <iostream>
+#include "lab01/mystring.h"
+
+void stringtest()
+{
+}
 
 int main()
 {
-    std::cout << "Hello, World!" << std::endl;
+    stringtest();
     return 0;
 }

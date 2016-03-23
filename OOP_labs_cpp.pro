@@ -7,5 +7,9 @@ MOC_DIR     = $${BUILD_DIR}/moc
 DESTDIR     = $${BUILD_DIR}/bin
 RCC_DIR     = $${BUILD_DIR}/rcc
 
+HEADERS += \
+    $$PWD/lab01/*.h \
+
 SOURCES += \
-    main.cpp
+    main.cpp \
+    $$PWD/lab01/*.cpp
