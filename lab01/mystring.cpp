@@ -1,7 +1,23 @@
+#include <cstring>
 #include "mystring.h"
 
 int substr(char* string1, char* string2)
 {
+    if (strlen(string2) > strlen(string1)) {
+        return -1;
+    }
+
+    if (strlen(string1) == strlen(string2)) {
+        return 0;
+    }
+
+    char* pch = strstr(string1, string2);
+    for (size_t i = 0; i < strlen(string1); ++i) {
+        if (*pch == string1[i]) {
+            return i;
+        }
+    }
+
     return -1;
 }
 
