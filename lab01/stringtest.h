@@ -5,6 +5,7 @@ enum TestCase {
     TEST_COMPACT,
     TEST_SUBSEQ,
     TEST_ADDWORD,
+    TEST_SORT,
     TEST_ISPAL,
     TEST_MAKEPAL,
     TEST_TXT_2_DOUBLE
