@@ -5,7 +5,8 @@
 void stringtest(TestCase item)
 {
     switch (item) {
-    case TEST_SUBSTR: {
+    case TEST_SUBSTR:
+    {
         std::cout << "1. int substr(char *string1, char *string2)" << std::endl;
         char string1[] = "string";
         char string2[] = "string2";
@@ -19,7 +20,8 @@ void stringtest(TestCase item)
         std::cout << "result: " << substr(string1, string4) << std::endl;
         break;
     }
-    case TEST_COMPACT: {
+    case TEST_COMPACT:
+    {
         std::cout << "2. char* compact(char *string)" << std::endl;
         char string1[] = "string";
         std::cout << "string: "<< string1 << std::endl;
@@ -31,17 +33,18 @@ void stringtest(TestCase item)
     }
     case TEST_SUBSEQ:
     {
-        std::cout << "3. int subseq(char *string1, char *string2)" << std::endl;
-        char string1[] = "string";
-        char string2[] = "ring";
-        std::cout << "string1: "<< string1 << ";\tstring2: " << string2 << std::endl;
-        std::cout << "result: " << substr(string1, string2) << std::endl;
-        char string3[] = "striiringgg";
-        std::cout << "string1: "<< string1 << ";\tstring2: " << string3 << std::endl;
-        std::cout << "result: " << substr(string1, string3) << std::endl;
-        break;
-    }
-    case TEST_ADDWORD:
+            std::cout << "3. int subseq(char *string1, char *string2)" << std::endl;
+            char string1[] = "string";
+            char string2[] = "string2";
+            std::cout << "string1: "<< string1 << ";\tstring2: " << string2 << std::endl;
+            std::cout << "result: " << subseq(string1, string2) << std::endl;
+            char string3[] = "strrrringggg";
+            std::cout << "string1: "<< string1 << ";\tstring2: " << string3 << std::endl;
+            std::cout << "result: " << subseq(string1, string3) << std::endl;
+            std::cout << "string1: "<< string2 << ";\tstring2: " << string3 << std::endl;
+            std::cout << "result: " << subseq(string2, string3) << std::endl;
+            break;
+    }    case TEST_ADDWORD:
     {
         std::cout << "4. int addword(char *word, char *arr, int size)" << std::endl;
         char arr[] = "Hello\0World\0";

@@ -4,8 +4,6 @@ int main()
 {
     stringtest(TEST_SUBSTR);
     stringtest(TEST_COMPACT);
-    stringtest(TEST_SUBSTR);
-    stringtest(TEST_COMPACT);
     stringtest(TEST_SUBSEQ);
     stringtest(TEST_ADDWORD);
     stringtest(TEST_SORT);

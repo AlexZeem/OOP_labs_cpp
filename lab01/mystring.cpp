@@ -39,7 +39,41 @@ char* compact(char *string)
 
 int subseq(char *string1, char *string2)
 {
-    return -1;
+    size_t longerLength = (strlen(string2) > strlen(string1)) ? strlen(string2) : strlen(string1);
+    size_t count = (strlen(string2) < strlen(string1)) ? strlen(string2) : strlen(string1);
+    bool seq = false;
+    int prev = 0;
+    int next = 0;
+
+    for (size_t i = 0; i < longerLength; ++i) {
+        size_t j = i;
+        for (size_t k = 0; k < count && j < longerLength; ++k) {
+            if (string2[j] == string1[k]) {
+                if (!seq) {
+                    seq = true;
+                    next = 1;
+                } else {
+                    ++next;
+                }
+                ++j;
+            } else {
+                if (seq) {
+                    seq = false;
+                    if (prev < next) {
+                        prev = next;
+                    }
+                }
+            }
+        }
+    }
+
+    int result = 0;
+    if (prev < next) {
+        result = next;
+    } else {
+        result = prev;
+    }
+    return result;
 }
 
 int addword(char *word, char *arr, int size)
